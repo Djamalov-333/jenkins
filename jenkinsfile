@@ -6,8 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
 		sh 'ssh root@172.30.0.99 hostname'
-		sh 'apt install nginx'
-		sh 'systemctl restart nginx'
+		sh 'apt-get install nginx"
             }
         }
         stage('Test') {
